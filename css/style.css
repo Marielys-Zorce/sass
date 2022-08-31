@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;700&family=Montserrat:wght@400;500;700&family=Roboto:wght@400;500;700&family=Taviraj:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Domine', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Taviraj', serif;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas:
+        "header"
+        "banner"
+        "main"
+        "footer";
+}
+
+/* Estilo Index */
+/* Estilo Header */
+.header{
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    border-bottom: 2px  rgb(237, 174, 201) solid;
+    z-index: 100; 
+    height: 110px;
+} 
+
+.gradientes{
+
+    /* gradientes */
+     background-image: linear-gradient(white 85%, rgb(242, 196, 216));
+}   
+
+.logo{
+    width: 50px;
+    height: 60px;
+}
+
+.colorNav{
+    background-color:white;
+}
+
+.letraGrande a{
+    font-size: 20px;
+  
+}
+
+li{
+    margin-left: 1.5rem;
+}
+
+.colorButton:hover {
+    background-color: rgb(237, 174, 201);
+
+}
+.colorButton {
+    background-color:  rgb(226, 212, 218);
+    color: dimgray;
+
+}
+
+
+/* Estilo Main */
+
+/* Estilo Banner */
+.banner {
+    grid-area: banner;
+}
+
+.banner img {
+    width: 100%;
+    height: 400px;
+}
+
+/* Estilo título */
+.titulo {
+    margin-bottom: 5px;
+    height: 100px;
+    padding: 25px;
+    color: darkgray;
+    border-bottom: 2px  rgb(237, 174, 201) solid;
+    text-align: center;
+    font-style: italic;
+    font-weight: normal;
+
+    /* gradientes */
+    background-image: radial-gradient(white 65%,darkgray);
+   
+    /* transformaciones */
+    animation-name: tituloCambiante;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+}
+
+/* Estilo Imagenes */
+
+.imgDestacadas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 60px;
+
+}
+
+.imgDestacadas img {
+    width: 280px;
+    height: 280px;
+    border-radius: 8px;
+    margin: 15px;
+    margin-bottom: 70px;
+    margin-top: 50px;
+    border: 2px  rgb(237, 174, 201) solid;   
+   
+}
+
+/* tranformaciones animaciones */
+.imgDestacadas img:hover{
+    transform:translate(5px, 5px);
+    transition: .3s;
+}
+
+/* Estilo Primera Sección */
+
+.primeraSeccion {
+    background-color: white;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    color: darkgray;
+    margin: 70px;
+    
+}
+
+/* Estilo Segunda Sección */
+
+.segundaSeccion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    background-color: white;
+    line-height: 2;
+    text-align: center;
+    color: darkgray;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.enLinea {
+    width: 200px;
+    height: 150px;  
+    margin: 20px 0px;
+    padding: 10px;    
+    text-align: center;    
+    color: darkgray;
+    font-style: italic;
+}
+
+/* Estilo Tercera Sección */
+
+.terceraSeccion {
+    background-color: white;
+    line-height: 2;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    color: darkgray;
+    margin: 40px;
+    font-size: 18px;
+}
+
+/* Estilo Enlaces */
+
+.enlaces a {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.sinDecorar {
+    text-decoration: none;
+    color: darkgray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*logo whatapp*/
+
+.wapp img {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 90px;
+    right: 40px;
+    background-color: #25d366;
+    border-radius: 50px;
+    text-align: center;
+    z-index: 100;
+}
+
+/* Estilo footer */
+.footer {
+    grid-area: footer;
+    border-top: 2px  rgb(226, 212, 218) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 175px;
+    /* gradientes */
+    background-image: linear-gradient(to top,  rgb(237, 174, 201),rgb(226, 212, 218) ); 
+}
+
+.imgRedes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+}
+
+.imgRedes img {
+    width: 30px;
+    margin-right: 20px; 
+}
+
+.imgPago{
+    width: 120px;
+    height: 35px;
+    position: relative;
+    top:50px
+}
+
+.textoChico p {
+    font-size: 15px;
+    color: black;
+    position: relative;
+    top:60px;
+}
+
+/* Estilo Sobre Nosotros */
+
+/* Estilo main */
+.imgTex{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.imgMain img {
+    width: 400px;
+    margin: 25px;
+    position:relative;
+    justify-content:left;
+    top: 10px;
+}
+
+.textoCentrado {
+    padding-top: 50px;
+    /* padding: 40px;     */
+    width: 350px;
+    text-align: center;
+    color: darkgray;
+    font-style: italic;   
+    bottom: 20px;
+    top: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.iframeVideo iframe {
+    width: 600px;
+    height: 300px;
+    margin: 60px;
+    position:relative;
+    justify-content:center;
+    
+}
+
+
+/* Estilo Productos */
+
+/* Estilo main */
+
+/* Estilo Nuestras Tiendas */
+
+/* Estilo Main */
+
+.tituloDos {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: darkgray;
+    text-align:left;
+    font-style: italic;
+    font-weight: normal
+}
+
+.iframe {
+    width: 350px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px;
+
+}
+
+/* Estilo Contacto */
+
+/* Estilo Main */
+
+/* Estilo Formulario */
+.form {
+    padding: 30px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: darkgray;
+    text-align: left;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 2;
+}
+
+.label {
+    display: block;
+}
+
+.input {
+    border: 0.5px darkgray solid;
+    width: 300px;
+    height: 30px;
+    padding: 8px;
+}
+
+.textarea {
+    border-color: darkgray;
+    width: 350px;
+    height: 150px;
+    padding: 8px;
+}
+
+.seccionContacto {
+    line-height: 2.5;
+    text-align: justify;
+    color: darkgray;
+    font-weight: normal;
+    font-style: italic;
+}
+.content{
+    display: flex;
+    direction: row;
+}
+
+.boton {
+    background-color: darkgray;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    border: none;
+}
+
+/* keyframes */
+@keyframes tituloCambiante {
+    0%{
+        color:darkgray;
+        
+    }
+    25%{
+        color:rgb(237, 174, 201);
+
+        
+    }
+    50%{
+        color:darkgray;
+        
+    }
+    75%{
+        color:rgb(237, 174, 201);
+        
+
+    }
+
+    100%{
+        color:dimgrey;
+    
+    }
+}
+
+/* Media Querys */
+/* Estrategia Mobile Last */
+
+@media (max-width:1500px) {
+
+    .logoHeader {
+        width: 70px;
+        margin-top: 10px;
+        
+
+    }
+
+    .imgDestacadas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 10px;
+    }
+}
+
+@media(max-width: 965px) {
+
+    .imgDestacadas img {
+        border-radius: 8px;
+        margin: 5px;
+        border: 2px rgb(254, 75, 152) solid;
+    }
+
+    .negrita a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    li {
+        margin-right: 12px;
+    }
+    .textoCentrado{
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media(max-width: 748px) {
+
+     
+    .logoHeader {
+        width: 42px;
+        height: 34px;
+      }
+
+    .negrita a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    li {
+        margin-right: 8px;
+    }
+    .banner {
+        width: 100%;
+       
+   
+       }
+
+}
+@media(max-width: 455px) {
+.imgMain img {
+    width: 280px;
+    /* margin: 40px; */
+    position: relative;
+    top: 10px;
+}
+.textoCentrado {
+    font-size: 15px;
+    margin-bottom: 15px;
+    
+   
+    
+}
+.textarea {
+     
+    width: 300px;
+    
+}
+
+}
+
+ @media(max-width: 378px) {
+    .negrita a {
+       
+        font-size: 6px;
+    }
+
+    li {
+        margin-right: 3px;
+    }
+
+    .textarea {
+     
+        width: 250px;
+        
+    }
+    .input{
+        width: 250px;
+    }
+    .boton{
+        width: 90px;
+    }
+    .form{
+        padding:auto;
+    }
+
+
+}
+
+@media(max-width: 349px) {
+    .negrita a {
+       
+        font-size: 6px;
+    }
+
+    li {
+        margin-right: 3px;
+    }
+    .textoCentrado {
+      
+        /* margin-bottom: 25px; */
+        margin: 10px;
+        /* font-size: 10px; */
+        width: 300px; 
+        text-align: center; 
+    }
+  
+}
+
+@media(max-width: 320px) {
+    .negrita a {
+       
+        font-size: 6px;
+    }
+    .textoChico {
+        font-size: 3px;
+    }
+    li {
+        margin-right: 3px;
+    }
+
+    .form{
+        padding: 25px;
+    }
+
+
+} 
