@@ -8,6 +8,7 @@
   font-family: 'Taviraj', serif;
   box-sizing: border-box; }
 
+/*Partials*/
 /* Estilo Header*/
 .headerSass .gradientesSass {
   grid-area: header;
@@ -29,7 +30,7 @@
         font-size: 20px; }
     .headerSass .gradientesSass .colorNav .container-fluid div form .colorButton {
       background-color: #e2d4da;
-      color: red; }
+      color: dimgray; }
       .headerSass .gradientesSass .colorNav .container-fluid div form .colorButton:hover {
         background-color: #edaec9; }
 
